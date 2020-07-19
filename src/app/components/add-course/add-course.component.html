@@ -1,1 +1,7 @@
-<p>add-course works!</p>
+<div>
+  <form class="form" (ngSubmit)="onSubmit()">
+    <input type="text" name="courseName" [(ngModel)]="courseName" placeholder="Ime predmeta">
+    <input type="text" name="description" [(ngModel)]="description" placeholder="Opis predmeta">
+    <input type="submit" value="Submit" class="btn">
+  </form>
+</div>

@@ -1,5 +1,7 @@
 <div>
-  <app-add-course></app-add-course>
+  <app-add-course
+    (addCourse)="addCourse($event)"
+  ></app-add-course>
 
   <app-get-courses
     (showAllCourses)="updateAllCourses()"

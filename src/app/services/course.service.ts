@@ -39,4 +39,9 @@ export class CourseService {
   cancelEnrollementToCourse(course): Observable<any>{
     return this.http.put<any>(`${this.apiUrl}/${course.courseName}/cancel_enroll`,{});
   }
+
+  addCourseToDB(course: Course): Observable<any>{
+    const url = `${this.apiUrl}`;
+    return this.http.post<any>(url, course, httpOptions);
+  }
 }

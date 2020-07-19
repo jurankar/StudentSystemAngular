@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-add-course',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-course.component.css']
 })
 export class AddCourseComponent implements OnInit {
+  @Output() addCourse: EventEmitter<any> = new EventEmitter<any>()
+
+  courseName:string;
+  description:string;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    const course = {
+      courseName: this.courseName,
+      description: this.description
+    }
+    this.addCourse.emit(course)
   }
 
 }

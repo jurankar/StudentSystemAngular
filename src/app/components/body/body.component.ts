@@ -27,8 +27,15 @@ export class BodyComponent implements OnInit {
   enrolledCourses(){
     this.courseService.getEnrolledCourses().subscribe(enCourses =>{
       this.courses = enCourses;
-      console.log(this.courses)
+      //console.log(this.courses)
     });
+  }
+
+  addCourse(course){
+    this.courseService.addCourseToDB(course).subscribe(retValue =>{
+      console.log(retValue);
+    });
+    this.updateAllCourses();
   }
 
 
