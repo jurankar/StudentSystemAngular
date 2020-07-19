@@ -26,7 +26,7 @@ export class CourseComponent implements OnInit {
   cancelEnrollement(course) {
     this.courseService.cancelEnrollementToCourse(course).subscribe(status =>{
       console.log(status);
-    });;
+    });
   }
 
 

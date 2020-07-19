@@ -38,5 +38,12 @@ export class BodyComponent implements OnInit {
     this.updateAllCourses();
   }
 
+  findCourseByName(courseName){
+    this.courseService.getCourseByName(courseName).subscribe(course =>{
+      console.log(course);
+      this.courses = course;
+    });
+  }
+
 
 }

@@ -20,7 +20,8 @@ export class AddCourseComponent implements OnInit {
   onSubmit(){
     const course = {
       courseName: this.courseName,
-      description: this.description
+      description: this.description,
+      enrolled: "false"
     }
     this.addCourse.emit(course)
   }

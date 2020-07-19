@@ -44,4 +44,9 @@ export class CourseService {
     const url = `${this.apiUrl}`;
     return this.http.post<any>(url, course, httpOptions);
   }
+
+  //get course by name
+  getCourseByName(courseName): Observable<Course[]>{
+    return this.http.get<Course[]>(`${this.apiUrl}/name/${courseName}`)
+  }
 }

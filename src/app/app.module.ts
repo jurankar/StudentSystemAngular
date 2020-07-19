@@ -11,6 +11,7 @@ import { GetCoursesComponent } from './components/get-courses/get-courses.compon
 import { ShowCoursesComponent } from './components/show-courses/show-courses.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CourseComponent } from './components/course/course.component';
+import { SpecificCourseComponent } from './components/specific-course/specific-course.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CourseComponent } from './components/course/course.component';
     AddCourseComponent,
     GetCoursesComponent,
     ShowCoursesComponent,
-    CourseComponent
+    CourseComponent,
+    SpecificCourseComponent
   ],
   imports: [
     BrowserModule,
