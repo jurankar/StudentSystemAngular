@@ -24,5 +24,12 @@ export class BodyComponent implements OnInit {
     });
   }
 
+  enrolledCourses(){
+    this.courseService.getEnrolledCourses().subscribe(enCourses =>{
+      this.courses = enCourses;
+      console.log(this.courses)
+    });
+  }
+
 
 }

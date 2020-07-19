@@ -10,6 +10,7 @@ import {Course} from '../../models/Course';
 })
 export class GetCoursesComponent implements OnInit {
   @Output() showAllCourses: EventEmitter<any> = new EventEmitter<any>();
+  @Output() showEnrolledCOurses: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private courseService:CourseService) { }
 
@@ -18,6 +19,11 @@ export class GetCoursesComponent implements OnInit {
 
   allCourses(): void{
     this.showAllCourses.emit()
+  }
+
+  enrolledCourses(): void{
+    this.showEnrolledCOurses.emit()
+
   }
 
 }
