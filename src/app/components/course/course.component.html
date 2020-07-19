@@ -1,4 +1,10 @@
 <div class="mt-4 w-25 border border-primary">
-  <p>Name of the course: {{course.courseName}}</p>
-  <p>Description: {{course.description}}</p>
+  <div>
+    <p>Name of the course: {{course.courseName}}</p>
+    <p>Description: {{course.description}}</p>
+  </div>
+  <div class="d-flex justify-content-center">
+    <button (click)="enroll(course)"  class="btn btn-success mr-3">ENROLL</button>
+    <button (click)="cancelEnrollement(course)" class="btn btn-warning">CANCEL ENROLLEMENT</button>
+  </div>
 </div>

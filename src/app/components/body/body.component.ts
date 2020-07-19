@@ -20,7 +20,7 @@ export class BodyComponent implements OnInit {
   updateAllCourses(){
     this.courseService.getAllCourses().subscribe(courses => {
       this.courses = courses;
-      console.log(this.courses)
+      //console.log(this.courses)
     });
   }
 

@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {CourseService} from '../../services/course.service';
+
 import {Course} from '../../models/Course';
 
 @Component({
@@ -9,9 +11,24 @@ import {Course} from '../../models/Course';
 export class CourseComponent implements OnInit {
   @Input() course:Course;
 
-  constructor() { }
+  constructor(private courseService:CourseService) { }
 
   ngOnInit(): void {
   }
+
+  enroll(course){
+    //console.log("course component enroll component")
+    this.courseService.enrollToCourse(course).subscribe(status =>{
+      console.log(status);
+    });
+  }
+
+  cancelEnrollement(course) {
+    this.courseService.cancelEnrollementToCourse(course).subscribe(status =>{
+      console.log(status);
+    });
+  }
+
+
 
 }

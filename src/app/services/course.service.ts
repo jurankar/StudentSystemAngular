@@ -27,4 +27,16 @@ export class CourseService {
   getEnrolledCourses(): Observable<Course[]>{
     return this.http.get<Course[]>(`${this.apiUrl}/enrolled`)
   }
+
+  //enroll to course
+  enrollToCourse(course): Observable<any>{
+    //console.log("service_enroll_course")
+    var put = this.http.put<any>(`${this.apiUrl}/${course.courseName}/enroll`, {});
+    console.log(put);
+    return put;
+  }
+
+  cancelEnrollementToCourse(course): Observable<any>{
+    return this.http.put<any>(`${this.apiUrl}/${course.courseName}/cancel_enroll`,{});
+  }
 }
