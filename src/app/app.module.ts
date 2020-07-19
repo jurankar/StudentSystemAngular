@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -8,6 +9,7 @@ import { AddCourseComponent } from './components/add-course/add-course.component
 import { GetCoursesComponent } from './components/get-courses/get-courses.component';
 import { ShowCoursesComponent } from './components/show-courses/show-courses.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CourseComponent } from './components/course/course.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BodyComponent,
     AddCourseComponent,
     GetCoursesComponent,
-    ShowCoursesComponent
+    ShowCoursesComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

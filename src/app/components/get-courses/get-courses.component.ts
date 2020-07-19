@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {CourseService} from '../../services/course.service';
+
+import {Course} from '../../models/Course';
 
 @Component({
   selector: 'app-get-courses',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./get-courses.component.css']
 })
 export class GetCoursesComponent implements OnInit {
+  @Output() showAllCourses: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(private courseService:CourseService) { }
 
   ngOnInit(): void {
+  }
+
+  allCourses(): void{
+    this.showAllCourses.emit()
   }
 
 }
