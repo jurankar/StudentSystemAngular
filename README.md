@@ -6,22 +6,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# How to use website
+To add a course to database fill the form under "Add course to database".
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Under paragraph "You can list all avalible classes or all classes that you are enrolled in", you can click either click on button "Show all courses",
+which will show all courses from the database, or you can click on "Show enrolled courses", which will show you the courses that you are enrolled in.
+P.S. When first launching the backend(springboot) of application, the database will be empty so you will have to add some courses and than click "Show all courses" to see results.
 
-## Build
+Under paragraph "Search for specific class by name.", you cann fill the input field with the name of the class you wish to find and click "Search course" to show it.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Under paragraph "Show the courses you are looking for", the courses that you are looking for will be displayed.
