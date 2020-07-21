@@ -17,4 +17,4 @@ Under paragraph "Search for specific class by name.", you cann fill the input fi
 
 Under paragraph "Show the courses you are looking for", the courses that you are looking for will be displayed.
 
-Bakcend for this project is written in springBoot and you can find it on this link: https://github.com/jurankar/Student_system_springboot
+Backend for this project is written in springBoot and you can find it on this link: https://github.com/jurankar/Student_system_springboot
