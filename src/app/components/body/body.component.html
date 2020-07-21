@@ -1,29 +1,22 @@
 <div>
-  <table>
-    <tr><th>
-      <p style="text-align: center"> Add course to database</p>
-      <app-add-course
-        (addCourse)="addCourse($event)"
-      ></app-add-course>
-    </th></tr>
-    <tr><th>
-      <p style="text-align: center">You can list all avalible classes or all classes that you are enrolled in</p>
-      <app-get-courses
-        (showAllCourses)="updateAllCourses()"
-        (showEnrolledCOurses)="enrolledCourses()"
-      ></app-get-courses>
-    </th></tr>
-    <tr><th>
-      <p style="text-align: center">Search for specific class by name.</p>
-      <app-specific-course
-        (searchCourse)="findCourseByName($event)"
-      ></app-specific-course>
-    </th></tr>
-    <tr><th>
-      <p style="text-align: center">Show the courses you are looking for</p>
-      <app-show-courses
-        [courses]="courses"
-      ></app-show-courses>
-    </th></tr>
-  </table>
+  <div class="div_style1">
+    <p class="pt-3" style="text-align: center"> Add course to database</p>
+    <app-add-course
+      (addCourse)="addCourse($event)"
+    ></app-add-course>
+    <p class="pt-1" style="text-align: center">You can list all avalible classes or all classes that you are enrolled in</p>
+    <app-get-courses
+      (showAllCourses)="updateAllCourses()"
+      (showEnrolledCOurses)="enrolledCourses()"
+    ></app-get-courses>
+    <p class="pt-5" style="text-align: center">Search for specific class by name.</p>
+    <app-specific-course
+      (searchCourse)="findCourseByName($event)"
+    ></app-specific-course>
+  </div>
+  <div class="d-flex justify-content-center">
+    <app-show-courses
+      [courses]="courses"
+    ></app-show-courses>
+  </div>
 </div>
